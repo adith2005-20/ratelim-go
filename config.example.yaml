@@ -1,0 +1,10 @@
+app:
+  example-app-1:
+    rate: 5
+    slack: 10
+    per: 1
+  default:
+    rate: 5
+    slack: 10
+    per: 1
+port: ":YOUR_PORT"
