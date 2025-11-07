@@ -1,6 +1,6 @@
 const TARGET = "http://localhost:8080/";
-const CONCURRENCY = 10;  // number of concurrent requests
-const REQUESTS = 50;     // total number of requests
+const CONCURRENCY = 20;  // number of concurrent requests
+const REQUESTS = 100;     // total number of requests
 
 async function delay(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -9,7 +9,11 @@ async function delay(ms) {
 async function makeRequest(i) {
   const start = Date.now();
   try {
-    const res = await fetch(TARGET);
+    const res = await fetch(TARGET, {
+      headers: {
+        "X-App-ID": "test-app1",
+      },
+    });
     const text = await res.text();
     const elapsed = Date.now() - start;
     console.log(
