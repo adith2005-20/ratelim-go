@@ -1,0 +1,11 @@
+services:
+  ratelim:
+    build: .
+    container_name: ratelim
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+    restart: unless-stopped
+    environment:
+      - GIN_MODE=release
