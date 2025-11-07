@@ -1,9 +1,11 @@
+![Ratelim Logo](https://github.com/user-attachments/assets/58094a48-f68f-4433-9d71-2bd9d7eb08df)
+
 # Ratelim
 
 Flexible in-memory rate limiter written in Go, inspired by [uber-go/ratelimit](https://github.com/uber-go/ratelimit)
 
 ### Features
-- Sets RPS, Slack, and other Policy from a single config file.
+- Sets RPS, Slack, and other Policy for each of your apps from a single config file.
 - Exposes Ratelimiting via REST API, making Ratelim framework-agnostic. Use it in any and all of your services!
 - Efficient, low-latency rate limiting using atomic operations.
 
